@@ -207,21 +207,9 @@ class DepthAI:
                         from rotate_motor import Rotate_Motor
                         motor = Rotate_Motor.RotateMotor()
                 if args['cnn_model'] == "app2":
-                        self.thread_time = 5.0
-                push_up_count,push_up_angle_180,push_up_angle_270,push_up_check = 0,0,0,0
-                add_face = False
-                add_face_count = 0
-                user_name = ""
-                try:
-                    pickle_file_data = read_pickle("face_encodings")
-                except:
-                    pickle_file_data = []
-                self.schedule_task_()
-                if is_rpi:
-                    import RPi.GPIO as GPIO
-                    pin = 16
-                    GPIO.setmode(GPIO.BOARD)
-                    GPIO.setup(pin, GPIO.OUT)
+                           """
+                    Insert Code for App 2 Here
+                """
                 while self.runThread:
                         
 
@@ -286,39 +274,29 @@ class DepthAI:
                                                     
                                                     global task_run_motor, task_play_sound, task_start_led
                                                     if args['cnn_model2'] == "app5_landmark":
-                                                         frame, detected_label = show_nn((nnet_prev["entries_prev"][camera], add_face, user_name, pickle_file_data),frame,NN_json=NN_json,config=config)
-                                                         
-                                                         if isinstance(detected_label, tuple):
-                                                             detected_label, face_added = detected_label
-                                                        
-                                                         
-                                                         if face_added:
-                                                        
-                                                             face_added = False
-                                                             pickle_file_data = read_pickle("face_encodings")
-                                                         
-                                                         add_face = False
-                                                         user_name = ""
+                                                        """
+                                                        Insert Code for App 5 Here
+                                                        """
                                                          
                                                     elif args['cnn_model'] == "app4":
-                                                        frame, push_up = show_nn(nnet_prev["entries_prev"][camera], frame,(push_up_count,push_up_angle_180,push_up_angle_270,push_up_check),NN_json=NN_json, config=config)
-                                                        push_up_count, push_up_angle_180, push_up_angle_270,push_up_check = push_up
-
+                                                        """
+                                                        Insert Code for App 4 Here
+                                                        """
+                                                        
+                                                        
                                                     elif args['social_distance']:
-                                                            if args['cnn_model'] != "app2":
-                                                                    raise Exception("social distance works with app2 only!!") 
-                                                            frame, detected_label = show_nn((nnet_prev["entries_prev"][camera],True,task_play_sound), frame, NN_json=NN_json, config=config)
-                                                            task_play_sound = False
+                                                        """
+                                                            Insert Code for App 3 Here
+                                                        """
                                                     else:
                                                             frame, detected_label = show_nn(nnet_prev["entries_prev"][camera], frame, NN_json=NN_json, config=config)
                                                             print(detected_label)
                                                     for label in detected_label:
                                                             
 
-                                                            if str(label) == "mask" and is_rpi and args['motor'] and task_run_motor:
-                                                                    #motor.motor_rotate()
-                                                                    task_run_motor = False
-                                                                    threading.Thread(target=motor.motor_rotate).start()
+                                                            """
+                                                            Insert Code for App 2 Here
+                                                            """
                                                             if str(label) == "person" and args['play_sound'] and task_play_sound:
                                                                     task_play_sound = False
                                                                     audio_file_path = os.path.abspath("./emergency003.wav")
