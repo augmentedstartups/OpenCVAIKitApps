@@ -30,14 +30,10 @@ from depthai_helpers.object_tracker_handler import show_tracklets
 global args, cnn_model2
 
 
-task_run_motor = False
-task_play_sound = False
-task_start_led = False
+
 
 def turn_led(GPIO,pin):
-        GPIO.output(pin, GPIO.HIGH)
-        sleep(14)
-        GPIO.output(pin, GPIO.LOW)
+
 
 def read_pickle(filename):
     """
@@ -56,8 +52,6 @@ def play_sound(audio_file):
     """
                 audio_file	:		file path which we want to play
         """
-
-    playsound(audio_file)
 
         
 
