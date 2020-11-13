@@ -204,12 +204,18 @@ class DepthAI:
                 # task  = False
 
                 if is_rpi and args['motor']:
-                        from rotate_motor import Rotate_Motor
-                        motor = Rotate_Motor.RotateMotor()
+                           """
+                    Insert Code for App 3 Here
+                """
                 if args['cnn_model'] == "app2":
                            """
                     Insert Code for App 2 Here
                 """
+                if is_rpi:
+                    import RPi.GPIO as GPIO
+                    pin = 16
+                    GPIO.setmode(GPIO.BOARD)
+                    GPIO.setup(pin, GPIO.OUT)
                 while self.runThread:
                         
 
