@@ -55,7 +55,7 @@ def read_pickle(filename):
 def play_sound(audio_file):
     """
                 audio_file	:		file path which we want to play
-    """
+        """
 
     playsound(audio_file)
 
@@ -204,13 +204,18 @@ class DepthAI:
                 # task  = False
 
                 if is_rpi and args['motor']:
-                           """
-                    Insert Code for App 3 Here
-                """
-                if args['cnn_model'] == "app2":
-                           """
+                    """
                     Insert Code for App 2 Here
-                """
+                    """
+                if args['cnn_model'] == "app2":
+                    """
+                    Insert Code for App 2 Here
+                    """
+                try:
+                    pickle_file_data = read_pickle("face_encodings")
+                except:
+                    pickle_file_data = []
+                self.schedule_task_()
                 if is_rpi:
                     import RPi.GPIO as GPIO
                     pin = 16
@@ -280,7 +285,7 @@ class DepthAI:
                                                     
                                                     global task_run_motor, task_play_sound, task_start_led
                                                     if args['cnn_model2'] == "app5_landmark":
-                                                        """
+                                                         """
                                                         Insert Code for App 5 Here
                                                         """
                                                          
@@ -288,11 +293,9 @@ class DepthAI:
                                                         """
                                                         Insert Code for App 4 Here
                                                         """
-                                                        
-                                                        
                                                     elif args['social_distance']:
                                                         """
-                                                            Insert Code for App 3 Here
+                                                        Insert Code for App 2 Here
                                                         """
                                                     else:
                                                             frame, detected_label = show_nn(nnet_prev["entries_prev"][camera], frame, NN_json=NN_json, config=config)
@@ -300,9 +303,10 @@ class DepthAI:
                                                     for label in detected_label:
                                                             
 
-                                                            """
-                                                            Insert Code for App 2 Here
-                                                            """
+                                                            if str(label) == "mask" and is_rpi and args['motor'] and task_run_motor:
+                                                                """
+                                                                Insert Code for App 3 Here
+                                                                """
                                                             if str(label) == "person" and args['play_sound'] and task_play_sound:
                                                                     task_play_sound = False
                                                                     audio_file_path = os.path.abspath("./emergency003.wav")
@@ -464,4 +468,5 @@ class DepthAI:
 if __name__ == "__main__":
         dai = DepthAI()
         dai.startLoop()
+
 
