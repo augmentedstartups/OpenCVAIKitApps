@@ -198,8 +198,9 @@ class DepthAI:
                 # task  = False
 
                 if is_rpi and args['motor']:
-                        from rotate_motor import Rotate_Motor
-                        motor = Rotate_Motor.RotateMotor()
+                           """
+                    Insert Code for App 3 Here
+                """
                 if args['cnn_model'] == "app2":
                         """
                                 Insert Code to here for App 2
