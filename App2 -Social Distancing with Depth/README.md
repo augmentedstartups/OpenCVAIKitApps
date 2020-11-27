@@ -17,5 +17,5 @@ python3 -m pip install -r requirements.txt
 ## Run The Example
 
 ```
-python3 main.py
+python3 social_distance_final.py
 ```
