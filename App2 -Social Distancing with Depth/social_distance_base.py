@@ -15,11 +15,11 @@ from depthai_utils import DepthAI, DepthAIDebug
 from distance import DistanceGuardian, DistanceGuardianDebug
 
 #log = logging.getLogger(__name__)
-task_play_sound = False
-audio_file_path = os.path.abspath("./social_distance.wav")
+"""   Audio functionallity 
+"""
 
 def play_sound(audio_file):
-    """   Audio file path which we want to play
+    """   Audio functionallity 
     """
 
 
