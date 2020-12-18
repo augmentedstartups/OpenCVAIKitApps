@@ -6,7 +6,7 @@ This experiment allows you to run the COVID-19 mask/no-mask object detector whic
 
 Below is a quick run of this mask detector:
 
-![](name-of-giphy.gif)
+![](https://media.giphy.com/media/QOOrmvanmNK7X7o5WB/giphy.gif)
 
 You can leverage this notebook ([here](https://github.com/luxonis/depthai-ml-training/tree/master/colab-notebooks#covid-19-maskno-mask-training-)) and add your own training images to improve the quality of this mask detector.  Our training was a quick weekend effort at it.  
 
