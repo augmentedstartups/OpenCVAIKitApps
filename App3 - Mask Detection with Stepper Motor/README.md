@@ -1,4 +1,6 @@
-# CoronaMask
+# Corona Mask Detection and Access Control using a Stepper Motor
+
+Watch the video here: http://bit.ly/OAKTutorialSeries
 
 This experiment allows you to run the COVID-19 mask/no-mask object detector which was trained via the Google Colab tutorial [here](https://github.com/luxonis/depthai-ml-training/tree/master/colab-notebooks#covid-19-maskno-mask-training-).
 
