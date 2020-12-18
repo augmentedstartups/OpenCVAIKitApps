@@ -1,5 +1,5 @@
 # OpenCV AI Kit Apps
-Video Tutorials by AugmentedStartups.info/YouTube
+Watch the full Video Tutorial Series here : http://bit.ly/OAKSeriesPlaylist
 
 # Download the Repo
 
