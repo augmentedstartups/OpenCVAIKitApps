@@ -1,6 +1,6 @@
 #Created by Luxonis
 #Modified by Augmented Startups - 18/12/2020
-#Watch the tutorial Series here : http://bit.ly/OAKSeriesPlaylist
+#Watch the tutorial Series here : http://bit.ly/OAKTutorialSeries
 import logging
 from pathlib import Path
 
