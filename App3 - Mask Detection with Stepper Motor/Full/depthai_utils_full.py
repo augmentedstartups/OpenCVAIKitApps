@@ -2,6 +2,7 @@
 #Modified by Augmented Startups - 18/12/2020
 #Watch the tutorial Series here : http://bit.ly/OAKTutorialSeries
 import logging
+import threading
 from pathlib import Path
 
 import cv2
@@ -135,11 +136,11 @@ class DepthAIDebug(DepthAI):
 def up():
     global distance
     print("Move up,", distance, "steps")
-    mymotortest.motor_go(False, "Full" , distance, 0.01 , False, .05)
+    threading.Thread(target=mymotortest.motor_go, args=(False, "Full" , distance, 0.01 , False, .05)).start()
    
 
 
 def down():
     global distance
     print("Move down,", distance, "steps")
-    mymotortest.motor_go(True, "Full" , distance, 0.01 , False, .05)
+    threading.Thread(target=mymotortest.motor_go, args=(True, "Full" , distance, 0.01 , False, .05)).start()
