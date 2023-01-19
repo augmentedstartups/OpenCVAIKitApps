@@ -14,4 +14,5 @@ and then on your Raspberry Pi type in the following command:
 
 You can find the files for 3D printing at the luxonis GitHub page:
 
-https://github.com/luxonis/depthai-hardware/blob/master/User-Contributed-Mechanical-Designs.md
+https://github.com/luxonis/depthai-hardware/blob/master/Mechanical-Designs.md
+
