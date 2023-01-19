@@ -4,7 +4,7 @@ Watch the full Video Tutorial Series here : http://bit.ly/OAKSeriesPlaylist
 # Download the Repo
 
 The Depth AI modified repo is quite big to fit on Github, so click the link here to download:
-[https://bit.ly/OAKAppRepo](https://github.com/augmentedstartups/OpenCVAIKitPrivateRepo)
+[[https://bit.ly/OAKAppRepo](https://github.com/augmentedstartups/OpenCVAIKitPrivateRepo)](https://github.com/augmentedstartups/OpenCVAIKitPrivateRepo)
 
 and then on your Raspberry Pi type in the following command:
 
